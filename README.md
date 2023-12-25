@@ -6,7 +6,8 @@ Ultrasonic sensor interfacing with PIC16F877A | HC SR04 sensor | CCS C
 This project utilizes a PIC16F877A microcontroller, an LCD module, and an HC-SR04 ultrasonic distance sensor to measure and display distances.
 
 ## Hardware Setup
-#LCD Module Connections
+
+# LCD Module Connections
 
 #define LCD_RS_PIN     PIN_D0
 #define LCD_RW_PIN     PIN_D1
@@ -17,20 +18,22 @@ This project utilizes a PIC16F877A microcontroller, an LCD module, and an HC-SR0
 #define LCD_DATA7      PIN_D6
 
 ## PIC Microcontroller Configuration
+
 #include <16F877A.h>
 #fuses HS,NOWDT,NOPROTECT,NOLVP
 #use delay(clock = 8000000)
 #include <lcd.c>
 #use fast_io(B)
 
+
 ## Program Logic
 
-1.Initializes the LCD module.
-2.Configures Timer1 for distance measurement.
-3.Enters a continuous loop for distance measurement.
-4.Triggers the HC-SR04 sensor, measures the time it takes for the echo signal to return.
-5.Checks for timeout or out-of-range conditions.
-6.Displays the distance on the LCD module.
+- Initializes the LCD module.
+- Configures Timer1 for distance measurement.
+- Enters a continuous loop for distance measurement.
+- Triggers the HC-SR04 sensor, measures the time it takes for the echo signal to return.
+- Checks for timeout or out-of-range conditions.
+- Displays the distance on the LCD module.
 
 ## Pin Configuration
 
